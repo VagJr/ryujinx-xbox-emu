@@ -1,0 +1,21 @@
+# Rust generated files
+**/target/
+**/build/
+**/build-*/
+
+# Per-machine configuration, caches and test data
+victory.toml
+**/runtime/
+**/cache/
+**/data/
+**/shaders/
+**/*.rpf
+**/*.xvc
+**/*.msixvc
+**/*.dmp
+**/*.crash.log
+**/crashes.log
+
+# Local/editor files
+.DS_Store
+Thumbs.db
