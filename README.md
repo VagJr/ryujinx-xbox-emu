@@ -76,3 +76,12 @@ A variante de VIctory com diagnósticos foi compilada separadamente com `--profi
 Este repositório não contém o jogo, executáveis do jogo, arquivos de shader extraídos do pacote, dados de usuário, arquivos de save, caches de shader/DXIL, dumps de memória ou minidumps. Os relatórios são resumidos aqui sem anexar dumps nem identificadores de telemetria. Os binários preservados são apenas os executáveis dos projetos de emulação.
 
 Consulte `BUILD-MANIFEST.tsv` para a lista exata dos artefatos incluídos.
+
+### Leonida puro e versões modificadas
+
+As snapshots `sources/leonida-pure/` e `sources/leonida-modified/` preservam, respectivamente, a pasta local `C:\gta\Leonida-main` e o checkout de trabalho `C:\gta\leonida-test\source`. Essas pastas locais não continham metadados Git, então não foi possível fixar o commit de origem. O arquivo de trabalho inclui as alterações locais que estavam nessa cópia. Também foram guardados os patches `4348.patch` e `6964.patch` em `patches/leonida/`.
+
+As tentativas locais com Leonida abriram uma janela branca e fecharam logo em seguida, sem interface do jogo. Não foi verificado carregamento do prólogo. Não há um executável principal de Leonida compilado nas duas pastas de origem. `builds/leonida/rt5-build/` guarda apenas os executáveis auxiliares de teste encontrados no diretório de build modificado: `gta6rt.exe`, `bvh_builder_test.exe` e `vk_pipeline_check.exe`. Eles validam partes do runtime e do BVH, não são um launcher de jogo.
+
+Os dois diretórios de origem foram copiados sem diretórios de build e cache, arquivos de shader e assets extraídos. A lista de executáveis e seus caminhos de origem foi atualizada em `BUILD-MANIFEST.tsv`.
+

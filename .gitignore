@@ -19,3 +19,8 @@ victory.toml
 # Local/editor files
 .DS_Store
 Thumbs.db
+
+# Leonida: per-game manifest hashes and generated game-derived navmesh map
+sources/leonida-*/game/xbox-1.0.2.1.json
+sources/leonida-*/navmeshes.navmesh-decode.json
+
