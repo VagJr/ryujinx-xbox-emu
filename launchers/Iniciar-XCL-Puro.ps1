@@ -3,14 +3,16 @@ param(
     [switch] $PrepararShaders,
     [switch] $Diagnostico,
     [switch] $Verificar,
-    [switch] $SincronizacaoAtual,
     [ValidateRange(1, 16)]
     [int] $ThreadsDeCompilacao = 8
 )
 
 $ErrorActionPreference = 'Stop'
-$buildDir = if ($SincronizacaoAtual) { 'build-930e8b4' } else { 'build-d5442d2' }
+$buildDir = 'build-b7aa9f3'
 $bin = Join-Path $PSScriptRoot "$buildDir\release\xcl.exe"
+if (!(Test-Path -LiteralPath $bin -PathType Leaf)) {
+    $bin = Join-Path $PSScriptRoot '..\builds\xcl-puro\build-b7aa9f3__release__xcl.exe'
+}
 $game = 'C:\Users\vagmi\Downloads\GTA6.Xbox.v1.0.2.1-CYBERLEEK'
 $gameExe = 'C:\Users\vagmi\Downloads\early_xmas\game_scarlett_master.exe'
 $sdk = 'C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64'
@@ -42,6 +44,7 @@ try {
     $env:XCL_DXC_DIR = $sdk
     $env:XCL_ADAPTER = 'GeForce RTX 3060'
     $env:XCL_NETWORK = '0'
+    $env:XCL_PSO_DISK_CACHE = '1'
     if ($PrepararShaders) {
         $env:XCL_DXC_THREADS = [string] $ThreadsDeCompilacao
         $env:XCL_PIPELINE_THREADS = '2'
