@@ -1,8 +1,10 @@
 # Ryujinx Xbox Emu
 
+[![Discord](https://img.shields.io/badge/Discord-Entrar%20no%20servidor-5865F2?logo=discord&logoColor=white)](https://discord.gg/z4JXVuchn3)
+
 Projeto comunitário para acompanhar a compatibilidade de emuladores Xbox no PC.
 
-Servidor Discord: https://discord.gg/z4JXVuchn3
+Servidor Discord: [discord.gg/z4JXVuchn3](https://discord.gg/z4JXVuchn3)
 
 Este repositório reúne as builds locais de XCL, VIctory, variantes com integração entre os projetos e ferramentas relacionadas que foram compiladas durante os testes neste PC. A finalidade é preservar versões, reproduzir testes e documentar o que cada caminho conseguiu fazer.
 
