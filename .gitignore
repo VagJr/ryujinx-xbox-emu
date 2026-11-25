@@ -1,26 +1,45 @@
-# Rust generated files
-**/target/
-**/build/
-**/build-*/
+/target
 
-# Per-machine configuration, caches and test data
-victory.toml
-**/runtime/
-**/cache/
-**/data/
-**/shaders/
-**/*.rpf
-**/*.xvc
-**/*.msixvc
-**/*.dmp
-**/*.crash.log
-**/crashes.log
+# Game data never goes into the repository (CONTRIBUTING.md, "Licence and provenance"): game
+# packages and archives, console executables and libraries, video, audio banks, textures, dumps.
+# XCL's own synthetic test data lives in tests/data/ and is listed explicitly below.
+*.rpf
+*.xvd
+*.xvc
+*.msixvc
+*.appx
+*.msix
+*.appxbundle
+*.xex
+*.xbe
+*.pak
+*.bk2
+*.bik
+*.ttpf
+*.dds
+*.ktx
+*.ktx2
+*.wem
+*.bnk
+*.exe
+*.dll
+*.pdb
+*.sys
+*.dmp
+*.mdmp
+*.iso
+*.pkg
+*.xsp
+*.cab
+MicrosoftGame.config
+appxmanifest.xml
+resources.pri
+!tests/data/testgame/MicrosoftGame.config
 
-# Local/editor files
-.DS_Store
-Thumbs.db
+# XCL's run output (logs, reports, frame dumps, shader dumps)
+*.log
+report.json
+frame_*.bmp
 
-# Leonida: per-game manifest hashes and generated game-derived navmesh map
-sources/leonida-*/game/xbox-1.0.2.1.json
-sources/leonida-*/navmeshes.navmesh-decode.json
-
+# Python bytecode of the scripts
+__pycache__/
